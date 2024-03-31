@@ -13,6 +13,9 @@ def verify_card_number(card_number):
         if number >= 10:
             number = (number // 10) + (number % 10)
         sum_of_even_digits += number
+         total = sum_of_odd_digits + sum_of_even_digits
+    print(total)
+    return total % 10 == 0
     
 def main():
     card_number = '4111-1111-4555-1142'
