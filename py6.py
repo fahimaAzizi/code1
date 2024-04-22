@@ -6,7 +6,7 @@ my_graph = {
 }
 
 def shortest_path(graph, start):
-    unvisited = []
+    unvisited = list(graph)
     distances = {}
     
     print(f'Unvisited: {unvisited}\nDistances: {distances}')
