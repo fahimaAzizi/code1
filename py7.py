@@ -5,18 +5,19 @@ rods = {
     'B': [],
     'C': []
 }
-def make_allowed_move(rod1, rod2):
+
+def make_allowed_move(rod1, rod2):    
     forward = False
-    if not rods[target]:
+    if not rods[rod2]:
         forward = True
-    elif rods[source] and rods[source][-1] < rods[target][-1]:
+    elif rods[rod1] and rods[rod1][-1] < rods[rod2][-1]:
         forward = True              
     if forward:
-        print(f'Moving disk {rods[source][-1]} from {source} to {target}')
-        rods[target].append(rods[source].pop())
+        print(f'Moving disk {rods[rod1][-1]} from {rod1} to {rod2}')
+        rods[rod2].append(rods[rod1].pop())
     else:
-        print(f'Moving disk {rods[target][-1]} from {target} to {source}')
-        rods[source].append(rods[target].pop())
+        print(f'Moving disk {rods[rod2][-1]} from {rod2} to {rod1}')
+        rods[rod1].append(rods[rod2].pop())
     
     # display our progress
     print(rods)
@@ -27,11 +28,12 @@ def move(n, source, auxiliary, target):
     for i in range(number_of_moves):
         remainder = (i + 1) % 3
         if remainder == 1:
-            print(f'Move {i + 1} allowed between {source} and {target}')            
+            print(f'Move {i + 1} allowed between {source} and {target}')
+            
         elif remainder == 2:
             print(f'Move {i + 1} allowed between {source} and {auxiliary}')
         elif remainder == 0:
-            print(f'Move {i + 1} allowed between {auxiliary} and {target}')
+            print(f'Move {i + 1} allowed between {auxiliary} and {target}')            
 
 # initiate call from source A to target C with auxiliary B
 move(NUMBER_OF_DISKS, 'A', 'B', 'C')
