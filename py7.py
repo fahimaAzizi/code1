@@ -45,7 +45,7 @@ move(NUMBER_OF_DISKS, 'A', 'B', 'C'
      
 
 
-same but difrend
+same but different
 
 NUMBER_OF_DISKS = 5
 A = list(range(NUMBER_OF_DISKS, 0, -1))
