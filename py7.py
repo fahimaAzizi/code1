@@ -41,12 +41,11 @@ def move(n, source, auxiliary, target):
             make_allowed_move(auxiliary, target)
            
 # initiate call from source A to target C with auxiliary B
-move(NUMBER_OF_DISKS, 'A', 'B', 'C')
+move(NUMBER_OF_DISKS, 'A', 'B', 'C'
+     
 
 
-
-
-
+same but difrend
 
 NUMBER_OF_DISKS = 5
 A = list(range(NUMBER_OF_DISKS, 0, -1))
