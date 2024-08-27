@@ -1,4 +1,3 @@
-
 text = 'mrttaqrhknsw ih puggrur'
 custom_key = 'python'
 
@@ -34,3 +33,4 @@ print(f'Encrypted text: {text}')
 print('Key: ' + custom_key)
 #decryption = decrypt(encryption, custom_key)
 #print(decryption)
+
